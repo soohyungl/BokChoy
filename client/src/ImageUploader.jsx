@@ -14,9 +14,9 @@ const Box = styled.div`
 const BoxTwo = styled.div`
   display: flex;
   justify-content: center;
+  margin: 0 auto;
   width: 1000px;
   height: 500px;
-
 `;
 const Header = styled.h1`
   text-shadow: 2px 2px #ff0000;
@@ -27,10 +27,8 @@ const Header = styled.h1`
   font-size: 50px;
 `;
 const Bax = styled.div`
-  display: flex;
+  margin: 0 auto;
   width: 1700px;
-  align-items: center;
-  
 `; 
 
 const Container = styled.div`
@@ -51,8 +49,6 @@ padding-left: 30px;
 height: 325px;
 `;
  
- 
-
 export default function ImageUploader() {
   const [file, setFile] = useState(null);
   const [url, setURL] = useState("");
@@ -109,7 +105,7 @@ export default function ImageUploader() {
   }
 
   return (
-    <div>
+    <div style={{width: '100%'}}>
     <Box>
       <form onSubmit={uploadImage}>
         <input className="button1" type="file" onChange={handleChange} ></input>

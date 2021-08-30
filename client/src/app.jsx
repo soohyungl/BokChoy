@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ImageUploader from './ImageUploader.jsx';
 import styled from 'styled-components';
 
@@ -8,9 +8,8 @@ const Container = styled.div`
 `;
 
 const Image = styled.div`
-width: 1000px;
+width: 100%;
 height: 500px;
-flex: 4
 align-self: center;
 `;
 const Header = styled.h1`

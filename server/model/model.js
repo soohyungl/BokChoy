@@ -1,5 +1,5 @@
 const SerpApi = require('google-search-results-nodejs');
-const search = new SerpApi.GoogleSearch("572f2674aa7b9745dd6dce63b1674e408b60f04617d51974aff884e397a951ac");
+const search = new SerpApi.GoogleSearch("9db270c4607e49dfdca5b9cca362006eb9149b4d0ff8ca61b9df54f288d2a98a");
 var axios = require("axios").default;
 // const callback = function(data) {
 //     console.log('yes it d', data);
@@ -45,7 +45,7 @@ const identifier = (data) => {
       params: {query: arr[0]},
       headers: {
         'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
-        'x-rapidapi-key': '03ffa659d4mshc4e93e3796be872p13a91djsnbba8107fc74f'
+        'x-rapidapi-key': '585d9d15damsh39bcc654d295c56p1f31bdjsn8fdcd3c3a7bf'
       }
     };
     
@@ -64,7 +64,7 @@ var options = {
   params: {ingredients: data},
   headers: {
     'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
-    'x-rapidapi-key': '03ffa659d4mshc4e93e3796be872p13a91djsnbba8107fc74f'
+    'x-rapidapi-key': '585d9d15damsh39bcc654d295c56p1f31bdjsn8fdcd3c3a7bf'
   }
 };
 return axios.request(options);
@@ -77,7 +77,7 @@ const getVideos = (data) => {
     params: {query: data, minLength: '0', maxLength: '999', number: '10', offset: '0'},
     headers: {
       'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
-      'x-rapidapi-key': '03ffa659d4mshc4e93e3796be872p13a91djsnbba8107fc74f'
+      'x-rapidapi-key': '585d9d15damsh39bcc654d295c56p1f31bdjsn8fdcd3c3a7bf'
     }
   };
   

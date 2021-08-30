@@ -14,6 +14,7 @@ router.get('/image', (req, res) => {
       console.log('back', req.query.url)
       if(data.image_results) {
         const state = await model.identifier(data);
+        console.log(state.data[0].name);
         const recipes = await model.getRecipes(state.data[0].name);
         const videos = await model.getVideos(state.data[0].name);
         const rez = {
