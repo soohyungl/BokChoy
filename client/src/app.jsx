@@ -10,7 +10,7 @@ const Container = styled.div`
 const Image = styled.div`
 width: 1000px;
 height: 500px;
-flex: 0 0 auto;
+flex: 4
 align-self: center;
 `;
 const Header = styled.h1`

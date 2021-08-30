@@ -8,17 +8,18 @@ router.get('/image', (req, res) => {
 // encodeURIComponent(req.query.url)
   const params = {
     engine: "google_reverse_image",
-    image_url: "https://www.kroger.com/product/images/large/front/0001111096968"
+    image_url:  req.query.url
   }
-
   model.getImage(params, async (data) => {
-
+      console.log('back', req.query.url)
       if(data.image_results) {
         const state = await model.identifier(data);
         const recipes = await model.getRecipes(state.data[0].name);
+        const videos = await model.getVideos(state.data[0].name);
         const rez = {
           item: state.data[0].name,
-          recipes: recipes.data
+          recipes: recipes.data,
+          videos: videos.data
         }
         res.status(200).send(rez);
       } else {

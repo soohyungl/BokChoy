@@ -3,7 +3,7 @@ import Recipe from './Recipe.jsx';
 import styled from 'styled-components';
 
 const Header = styled.h1`
-  text-shadow: 2px 2px #ff0000;
+  text-shadow: 1px 1px #ff0000;
   font-family: Arial;
   color: yellow;
   text-align: center;
