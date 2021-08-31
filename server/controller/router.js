@@ -14,15 +14,25 @@ router.get('/image', (req, res) => {
       console.log('back', req.query.url)
       if(data.image_results) {
         const state = await model.identifier(data);
-        console.log(state.data[0].name);
+      if(state.data.length > 0){
         const recipes = await model.getRecipes(state.data[0].name);
         const videos = await model.getVideos(state.data[0].name);
+        
         const rez = {
-          item: state.data[0].name,
-          recipes: recipes.data,
-          videos: videos.data
+          item: await state.data[0].name,
+          recipes: await recipes.data,
+          videos: await videos.data
         }
         res.status(200).send(rez);
+      } else {
+        const rez = {
+          item: null,
+          recipes: null, 
+          videos: null
+        }
+        res.status(200).send(rez);
+      } 
+        
       } else {
         res.status(500).send('could not get result');
       }

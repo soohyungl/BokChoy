@@ -1,5 +1,5 @@
 const SerpApi = require('google-search-results-nodejs');
-const search = new SerpApi.GoogleSearch("9db270c4607e49dfdca5b9cca362006eb9149b4d0ff8ca61b9df54f288d2a98a");
+const search = new SerpApi.GoogleSearch("0e3c4db35d4881fed611da18d0acc31164ffcd5978f56aabba25af901e808ee5");
 var axios = require("axios").default;
 // const callback = function(data) {
 //     console.log('yes it d', data);
@@ -24,15 +24,16 @@ const identifier = (data) => {
     for(let i = 0; i < data.image_results.length; i++) {
         let array = data.image_results[i].title.split(" ");
         for(let j = 0; j < array.length; j++) {
-            if(!words[array[j]]) {
+            if(!words[array[j]] ) {
                 words[array[j]] = 1;
-            } else if (array[j] === '-'){
+            } else if (array[j] === '-' ){
                 continue;
             } else {
                 words[array[j]] ++;
             }
         }
     } 
+    console.log(words);
     const arr = Object.keys(words).filter(x => {
         return words[x] == Math.max.apply(null, 
         Object.values(words));
@@ -45,7 +46,7 @@ const identifier = (data) => {
       params: {query: arr[0]},
       headers: {
         'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
-        'x-rapidapi-key': '585d9d15damsh39bcc654d295c56p1f31bdjsn8fdcd3c3a7bf'
+        'x-rapidapi-key': 'fc3f64b5c8msh259f344f03ff4b3p10b157jsn5e294532107c'
       }
     };
     
@@ -64,7 +65,7 @@ var options = {
   params: {ingredients: data},
   headers: {
     'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
-    'x-rapidapi-key': '585d9d15damsh39bcc654d295c56p1f31bdjsn8fdcd3c3a7bf'
+    'x-rapidapi-key': 'fc3f64b5c8msh259f344f03ff4b3p10b157jsn5e294532107c'
   }
 };
 return axios.request(options);
@@ -77,7 +78,7 @@ const getVideos = (data) => {
     params: {query: data, minLength: '0', maxLength: '999', number: '10', offset: '0'},
     headers: {
       'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
-      'x-rapidapi-key': '585d9d15damsh39bcc654d295c56p1f31bdjsn8fdcd3c3a7bf'
+      'x-rapidapi-key': 'fc3f64b5c8msh259f344f03ff4b3p10b157jsn5e294532107c'
     }
   };
   

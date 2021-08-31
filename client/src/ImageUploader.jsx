@@ -99,6 +99,7 @@ export default function ImageUploader() {
     setVids(null);
     setPub(null);
     setRecipes(null);
+    setURL("");
     // let img = e.target.files[0];
     // setURL(URL.createObjectURL(img));
     // console.log(url);
@@ -108,8 +109,8 @@ export default function ImageUploader() {
     <div style={{width: '100%'}}>
     <Box>
       <form onSubmit={uploadImage}>
-        <input className="button1" type="file" onChange={handleChange} ></input>
-        <button className="button1" onClick={ uploadImage } disabled={!file}>{url === "" ? 'What is this thing?' : 'uploaded'}</button>
+        <input class="btn first" type="file" id="file" onChange={handleChange} ></input>
+        <button class="btn fourth" onClick={ uploadImage } disabled={!file}>{url === "" ? 'What is this thing?' : 'uploaded'}</button>
       </form>
     </Box>
       <Header>{BokChoy}</Header>
