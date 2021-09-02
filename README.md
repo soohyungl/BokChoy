@@ -1,6 +1,5 @@
 # BokChoy?
-BokChoy? App
-This is an application mainly used for identifying unknown produce items at ethnic grocery stores, parsing recipes, and finding new things to cook with based on this information. This application will take an input photo from your system and return the name of the produce item, a recipe list, and a list of relevant YouTube videos. 
+BokChoy? is an application mainly used for identifying unknown produce items at ethnic grocery stores, parsing recipes, and finding new things to cook with based on this information. This application will take an input photo from your system and return the name of the produce item, a recipe list, and a list of relevant YouTube videos. 
 
 ********************                      ********************
 ____________________ Things you will need ____________________
@@ -13,7 +12,7 @@ ____________________ Things you will need ____________________
 ____________________ Starting the App ____________________
 
 1. Run "npm install"
-2. This app uses babel/webpack. To use, run "npm run build"
+2. This app uses babel/webpack. To use, run "npm run build"Cancel changes
 3. To start the server which will be requesting/serving the API responses, use "npm start"
 4. Connect to http://localhost:3000/
 5. Upload a clear image of the produce in question, make sure it is one item by itself, and have fun!
