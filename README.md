@@ -1,5 +1,5 @@
 # BokChoy?
-BokChoy? is an application mainly used for identifying unknown produce items at ethnic grocery stores, parsing recipes, and finding new things to cook with based on this information. This application will take an input photo from your system and return the name of the produce item, a recipe list, and a list of relevant YouTube videos. 
+BokChoy? is an application used to identify unknown produce items at ethnic grocery stores, parsing recipes, and finding new things to cook with based on this information. This application will take an input photo from your system and return the name of the produce item, a recipe list, and a list of relevant YouTube videos. 
 
 ********************                      ********************
 ____________________ Things you will need ____________________
