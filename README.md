@@ -5,14 +5,14 @@ BokChoy? is an application used to identify unknown produce items at grocery sto
 ____________________ Things you will need ____________________
 
 1. Make sure you have an API Key from SerpAPI for the Google Reverse Image Search. You can create one by making a new account on https://serpapi.com/google-reverse-image .
-2. Make sure you have an API Key from Spooncular API for the recipe list and video list. You will have to create a new account on RapidAPI and navigate to SpoonCcular's api from https://rapidapi.com/spoonacular/api/recipe-food-nutrition .
+2. Make sure you have an API Key from Spooncular API for the recipe list and video list. You will have to create a new account on RapidAPI and navigate to SpoonCular's api from https://rapidapi.com/spoonacular/api/recipe-food-nutrition .
 3. Make sure you have a Cloudinary API key as well as the URL for the cloudinary image ready
 
 ********************                      ********************
 ____________________ Starting the App ____________________
 
 1. Run "npm install"
-2. This app uses babel/webpack. To use, run "npm run build"Cancel changes
+2. This app uses babel/webpack. To use, run "npm run build"
 3. To start the server which will be requesting/serving the API responses, use "npm start"
 4. Connect to http://localhost:3000/
 5. Upload a clear image of the produce in question, make sure it is one item by itself, and have fun!
